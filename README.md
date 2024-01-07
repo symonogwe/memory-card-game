@@ -11,6 +11,8 @@ This project aims to create a memory card game where users can test their memory
 
 
 Features
+
+
 Memory Game: Click on a unique card to select it.
 Scoring System: Incremental scoring for each unique card clicked.
 Game Over on Duplicate Click: Reset score to 0 if the same card is clicked twice in a round.
