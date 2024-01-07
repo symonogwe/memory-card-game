@@ -14,7 +14,11 @@ Features
 
 
 Memory Game: Click on a unique card to select it.
+
 Scoring System: Incremental scoring for each unique card clicked.
+
 Game Over on Duplicate Click: Reset score to 0 if the same card is clicked twice in a round.
+
 Highest Score Tracking: Keep track of the user's highest achieved score.
+
 React & Hooks: Utilizes React and hooks like useState and useEffect for state management while fetching data from an external API.
