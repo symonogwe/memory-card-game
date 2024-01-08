@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 import shuffleArray from "./utils";
 
-export default function MainCard({ setScore, setBestScore }) {
+export default function MainCard({ setScore, setBestScore, score, bestScore }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -26,7 +26,17 @@ export default function MainCard({ setScore, setBestScore }) {
     <div className="main-card-container">
       {data &&
         shuffleArray(data).map((item) => {
-          return <Card key={item.id} src={item.image} name={item.name} />;
+          return (
+            <Card
+              key={item.id}
+              src={item.image}
+              name={item.name}
+              setScore={setScore}
+              setBestScore={setBestScore}
+              score={score}
+              bestScore={bestScore}
+            />
+          );
         })}
     </div>
   );

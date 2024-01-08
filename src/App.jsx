@@ -10,7 +10,12 @@ export default function App() {
   return (
     <div className="maim-container">
       <Nav score={score} bestScore={bestScore} />
-      <MainCard setScore={setScore} setBestScore={setBestScore} />
+      <MainCard
+        setScore={setScore}
+        setBestScore={setBestScore}
+        score={score}
+        bestScore={bestScore}
+      />
     </div>
   );
 }
