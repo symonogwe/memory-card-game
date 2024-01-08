@@ -1,6 +1,8 @@
 import Card from "./Card";
 import { useEffect, useState } from "react";
 
+import shuffleArray from "./utils";
+
 export default function MainCard({ setScore, setBestScore }) {
   const [data, setData] = useState(null);
 
@@ -23,7 +25,7 @@ export default function MainCard({ setScore, setBestScore }) {
   return (
     <div className="main-card-container">
       {data &&
-        data.map((item) => {
+        shuffleArray(data).map((item) => {
           return <Card key={item.id} src={item.image} name={item.name} />;
         })}
     </div>
