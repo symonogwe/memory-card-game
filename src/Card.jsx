@@ -7,21 +7,28 @@ export default function Card({
   setBestScore,
   score,
   bestScore,
+  id,
+  clicked,
+  setClicked,
 }) {
-  const [clicked, setClicked] = useState(false);
-
   function handleDivClick() {
-    // if (!clicked) {
-    //   if (score < bestScore) {
-    //     setScore((s) => s + 1);
-    //     setClicked(true);
-    //   }
-    //   setScore((s) => s + 1);
-    //   setBestScore((bs) => bs + 1);
-    //   setClicked(true);
-    // }
-    // setScore(0);
-    // todo: work on div click logic
+    if (!clicked.includes(id)) {
+      const newArr = [...clicked];
+      newArr.push(id);
+      setClicked(newArr);
+      setScore((s) => s + 1);
+      return;
+    } else {
+      if (score > bestScore) {
+        setBestScore(score);
+        setScore(0);
+        setClicked([]);
+        return;
+      } else {
+        setScore(0);
+        setClicked([]);
+      }
+    }
   }
 
   return (
