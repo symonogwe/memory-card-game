@@ -5,6 +5,7 @@ import shuffleArray from "./utils";
 
 export default function MainCard({ setScore, setBestScore, score, bestScore }) {
   const [data, setData] = useState(null);
+  const [clicked, setClicked] = useState([]);
 
   useEffect(() => {
     let isStopped = false;
@@ -35,6 +36,9 @@ export default function MainCard({ setScore, setBestScore, score, bestScore }) {
               setBestScore={setBestScore}
               score={score}
               bestScore={bestScore}
+              id={item.id}
+              clicked={clicked}
+              setClicked={setClicked}
             />
           );
         })}
