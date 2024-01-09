@@ -8,7 +8,7 @@ export default function App() {
   const [bestScore, setBestScore] = useState(0);
 
   return (
-    <div className="maim-container">
+    <div className="main-container">
       <Nav score={score} bestScore={bestScore} />
       <MainCard
         setScore={setScore}
