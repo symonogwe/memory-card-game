@@ -73,6 +73,12 @@ body {
   text-align: center;
   border-radius: 0.5em;
   box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.character-card:hover {
+  scale: 0.9;
+  transition: 200ms ease-in-out;
 }
 
 .character-card img {
