@@ -31,7 +31,11 @@ body {
   background-color: var(--base-color);
 }
 
-.main-container {
+.main-container p {
+  color: var(--sub-color);
+  font-family: var(--base-h1-ff);
+  font-size: calc(0.7rem + 0.5vw);
+  text-align: center;
 }
 
 .nav-container {
@@ -64,6 +68,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5px;
+  margin-top: 2em;
 }
 
 .character-card {
