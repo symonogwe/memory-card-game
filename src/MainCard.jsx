@@ -23,25 +23,34 @@ export default function MainCard({ setScore, setBestScore, score, bestScore }) {
     };
   }, []);
 
-  return (
-    <div className="main-card-container">
-      {data &&
-        shuffleArray(data).map((item) => {
-          return (
-            <Card
-              key={item.id}
-              src={item.image}
-              name={item.name}
-              setScore={setScore}
-              setBestScore={setBestScore}
-              score={score}
-              bestScore={bestScore}
-              id={item.id}
-              clicked={clicked}
-              setClicked={setClicked}
-            />
-          );
-        })}
-    </div>
-  );
+  if (clicked.length === 12) {
+    return (
+      <div className="game-over-container">
+        <p>Congrats! You Got All Characters</p>
+        <button>Play Again</button>
+      </div>
+    );
+  } else {
+    return (
+      <div className="main-card-container">
+        {data &&
+          shuffleArray(data).map((item) => {
+            return (
+              <Card
+                key={item.id}
+                src={item.image}
+                name={item.name}
+                setScore={setScore}
+                setBestScore={setBestScore}
+                score={score}
+                bestScore={bestScore}
+                id={item.id}
+                clicked={clicked}
+                setClicked={setClicked}
+              />
+            );
+          })}
+      </div>
+    );
+  }
 }

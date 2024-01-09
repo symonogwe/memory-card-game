@@ -98,6 +98,32 @@ body {
   font-family: var(--base-p-ff);
 }
 
+.game-over-container {
+  /* border: 1px solid var(--sub-color); */
+  background-color: var(--sub-base-color);
+  margin-top: 2em;
+  padding: 4em;
+  border-radius: 0.5em;
+  display: grid;
+  justify-items: center;
+}
+
+.game-over-container p {
+  font-size: calc(1.3rem + 0.8vw);
+  font-family: var(--base-p-ff);
+  color: var(--text-color);
+}
+
+.game-over-container button {
+  margin-top: 1em;
+  padding: 0.4em 0.9em;
+  border-radius: 0.5em;
+  border: none;
+  background-color: var(--sub-color);
+  color: var(--base-color);
+  cursor: pointer;
+}
+
 @media (min-width: 600px) {
   .nav-container {
     display: grid;
