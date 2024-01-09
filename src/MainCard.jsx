@@ -7,6 +7,10 @@ export default function MainCard({ setScore, setBestScore, score, bestScore }) {
   const [data, setData] = useState(null);
   const [clicked, setClicked] = useState([]);
 
+  function playAgain() {
+    location.reload();
+  }
+
   useEffect(() => {
     let isStopped = false;
 
@@ -27,7 +31,7 @@ export default function MainCard({ setScore, setBestScore, score, bestScore }) {
     return (
       <div className="game-over-container">
         <p>Congrats! You Got All Characters</p>
-        <button>Play Again</button>
+        <button onClick={playAgain}>Play Again</button>
       </div>
     );
   } else {
