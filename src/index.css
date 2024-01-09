@@ -28,13 +28,12 @@
 }
 
 .main-container {
-  /* border: 1px solid red; */
   background-color: var(--base-color);
 }
 
 .nav-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   border-bottom: 2px solid var(--sub-base-color);
   margin-bottom: 1.5em;
@@ -49,6 +48,7 @@
 
 .score-board-container {
   border: 2px solid var(--sub-base-color);
+  padding: var(--base-padding);
 }
 
 .score-board-container p {
