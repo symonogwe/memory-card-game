@@ -57,6 +57,8 @@ body {
 .score-board-container {
   border: 2px solid var(--sub-base-color);
   padding: var(--base-padding);
+  width: 50%;
+  justify-self: end;
 }
 
 .score-board-container p {
