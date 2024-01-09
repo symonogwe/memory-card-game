@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Volkhov&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Aleo&display=swap");
+
+:root {
+  --base-color: #264653;
+  --sub-base-color: #2a9d8f;
+  --sub-color: #e9c46a;
+  --text-color: #f0ebd8;
+  --base-p-fs: calc(0.8rem + 0.7vw);
+  --base-h1-fs: calc(1.7rem + 1.5vw);
+  --base-h2-fs: calc(1rem + 0.8vw);
+  --base-h3-fs: calc(1.2rem + 1vw);
+  --base-h1-ff: "Secular One", sans-serif;
+  --base-h2-ff: "Assistant", sans-serif;
+  --base-p-ff: "Volkhov", sans-serif;
+  --logo-width: max(35px, 30%);
+  --base-paragraph-ff: "Nanum Myeongjo", sans-serif;
+  --base-margin: 0.2em 0.6em;
+  --base-padding: 0.4em 0.6em;
+  --box-shadow: 5px 10px 30px black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  /* border: 1px solid red; */
+  background-color: var(--base-color);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--sub-base-color);
+  margin-bottom: 1.5em;
+  padding: var(--base-padding);
+}
+
+.nav-container h1 {
+  font-size: var(--base-h1-fs);
+  font-family: var(--base-h1-ff);
+  color: var(--sub-color);
+}
+
+.score-board-container {
+  border: 2px solid var(--sub-base-color);
+}
+
+.score-board-container p {
+  font-size: calc(0.7rem + 0.7vw);
+  color: var(--text-color);
+}
+
+.main-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+.character-card {
+  border: 1px solid var(--sub-base-color);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+}
+
+.character-card img {
+  width: 130px;
+  height: auto;
+}
+
+.character-card p {
+  color: var(--sub-color);
+  font-family: var(--base-p-ff);
+}
