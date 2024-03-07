@@ -36,7 +36,7 @@ export default function MainCard({ setScore, setBestScore, score, bestScore }) {
     );
   } else {
     return (
-      <div className="main-card-container">
+      <div className="main-card-container" role="main-card">
         {data &&
           shuffleArray(data).map((item) => {
             return (
