@@ -32,7 +32,11 @@ export default function Card({
   }
 
   return (
-    <div className="character-card" onClick={handleDivClick}>
+    <div
+      className="character-card"
+      onClick={handleDivClick}
+      data-testid="data-card"
+    >
       <img src={src} alt={name} />
       <p>{name}</p>
     </div>
