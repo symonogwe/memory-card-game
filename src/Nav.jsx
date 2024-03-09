@@ -5,7 +5,7 @@ export default function Nav({ score, bestScore }) {
         <h1>Rick & Morty Memory Game</h1>
       </div>
       <div className="score-board-container">
-        <p>Score: {score}</p>
+        <p data-testid="score-p">Score: {score}</p>
         <p>Best Score: {bestScore}</p>
       </div>
     </div>
